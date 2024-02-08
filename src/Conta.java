@@ -4,7 +4,14 @@ public class Conta {
     double saldo;
     int agencia;
     int numero;
-    String titular;
+    Cliente titular;
+
+    public Conta(double saldo, int agencia, int numero, Cliente titular) {
+        this.saldo = saldo;
+        this.agencia = agencia;
+        this.numero = numero;
+        this.titular = titular;
+    }
 
     void depositar(double valor) {
         System.out.println("You deposited " + "$" + valor);
@@ -29,7 +36,6 @@ public class Conta {
         } else {
             this.saldo -= valor;
             contaDestino.saldo += valor;
-            System.out.println(this.titular + " transfered $" + valor + " to " + contaDestino.titular );
             return true;
         }
     }

@@ -1,27 +1,11 @@
 public class CriaConta {
     
     public static void main(String[] args) {
-        Conta primeiraConta = new Conta();
-        Conta segundaConta = new Conta();
+        Cliente leonardo = new Cliente("Leonardo", "121.151.645-58", "Estágiario");
+        Conta contaLeonardo = new Conta(250, 215, 26, leonardo);
 
-        primeiraConta.titular = "Leonardo";
-        segundaConta.titular = "Paulo";
+        
 
-        primeiraConta.depositar(100);
-        primeiraConta.depositar(500);
-
-        System.out.println("First account balance: " + primeiraConta.saldo);
-
-        primeiraConta.sacar(500);
-
-        System.out.println("First account balance: " + primeiraConta.saldo);
-
-        primeiraConta.sacar(200);
-
-        primeiraConta.transferir(50, segundaConta);
-
-        System.out.println("Seccond account balance: " + segundaConta.saldo);
-        System.out.println("First account balance: " + primeiraConta.saldo);
     }
 
 }
