@@ -4,7 +4,7 @@ public class CriaConta {
         Cliente leonardo = new Cliente("Leonardo", "121.151.645-58", "Estágiario");
         Conta contaLeonardo = new Conta(250, 215, 26, leonardo);
 
-        System.out.println(contaLeonardo.verificarSaldo());
+        System.out.println(contaLeonardo.getSaldo());
 
     }
 

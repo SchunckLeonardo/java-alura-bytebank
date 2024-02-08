@@ -44,7 +44,7 @@ public class Conta {
         }
     }
 
-    public double verificarSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
