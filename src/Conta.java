@@ -57,8 +57,8 @@ public class Conta {
         return this.agencia;
     }
 
-    public Cliente getTitular() {
-        return this.titular;
+    public String getTitular() {
+        return this.titular.getNome();
     }
 
     // Setters
@@ -68,6 +68,10 @@ public class Conta {
 
     public void setAgencia(int agencia) {
         this.agencia = agencia;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
     }
 
 }
