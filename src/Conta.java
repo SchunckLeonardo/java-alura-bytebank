@@ -5,9 +5,11 @@ public class Conta {
     private int agencia;
     private int numero;
     private Cliente titular;
+    private static int total;
 
     public Conta(int agencia, int numero, Cliente titular) {
-        if(agencia <= 0 || numero <= 0) return;
+        if (agencia <= 0 || numero <= 0) return;
+        total++;
         this.agencia = agencia;
         this.numero = numero;
         this.titular = titular;
@@ -57,25 +59,21 @@ public class Conta {
         return this.agencia;
     }
 
+    public static int getTotal() {
+        return total;
+    }
+
     public String getTitular() {
         return this.titular.getNome();
     }
 
     // Setters
     public void setNumero(int numero) {
-        if(numero <= 0) {
-            System.out.println("Value can't be minor or equal 0!");
-        } else {
-            this.numero = numero;
-        }
+        this.numero = numero;
     }
 
     public void setAgencia(int agencia) {
-        if(agencia <= 0) {
-            System.out.println("Value can't be minor or equal 0!");
-        } else {
-            this.agencia = agencia;
-        }
+        this.agencia = agencia;
     }
 
     public void setTitular(Cliente titular) {
