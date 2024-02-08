@@ -21,4 +21,17 @@ public class Conta {
             return true;
         }
     }
+
+    public boolean transferir(double valor, Conta contaDestino) {
+        if(valor > this.saldo) {
+            System.out.println("You don't have money enough for transfer to other account!");
+            return false;
+        } else {
+            this.saldo -= valor;
+            contaDestino.saldo += valor;
+            System.out.println(this.titular + " transfered $" + valor + " to " + contaDestino.titular );
+            return true;
+        }
+    }
+
 }
