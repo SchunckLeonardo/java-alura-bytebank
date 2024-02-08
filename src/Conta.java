@@ -6,8 +6,8 @@ public class Conta {
     private int numero;
     private Cliente titular;
 
-    public Conta(double saldo, int agencia, int numero, Cliente titular) {
-        this.saldo = saldo;
+    public Conta(int agencia, int numero, Cliente titular) {
+        if(agencia <= 0 || numero <= 0) return;
         this.agencia = agencia;
         this.numero = numero;
         this.titular = titular;
@@ -63,11 +63,19 @@ public class Conta {
 
     // Setters
     public void setNumero(int numero) {
-        this.numero = numero;
+        if(numero <= 0) {
+            System.out.println("Value can't be minor or equal 0!");
+        } else {
+            this.numero = numero;
+        }
     }
 
     public void setAgencia(int agencia) {
-        this.agencia = agencia;
+        if(agencia <= 0) {
+            System.out.println("Value can't be minor or equal 0!");
+        } else {
+            this.agencia = agencia;
+        }
     }
 
     public void setTitular(Cliente titular) {
